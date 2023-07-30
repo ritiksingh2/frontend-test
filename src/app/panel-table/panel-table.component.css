@@ -1,13 +1,13 @@
 /* Add custom styles for the navbar */
 .mat-toolbar {
-    background-color: #000000;
+    background-color: #1976D2;
     color: white;
   }
   
   .example-spacer {
-    flex: 1;
-    text-align: center; 
+    flex: 1 1 auto;
   }
+  
   .app-icon {
     padding-left: 10px;
   }
@@ -17,7 +17,7 @@
     width: 100%;
     border-collapse: collapse;
   }
-  
+
   td, th {
     padding: 12px;
     text-align: left;
@@ -53,10 +53,20 @@
   .latitude, .longitude {
     font-weight: bold;
   }
- 
+  
+  /* Add custom styles for the container */
   .container {
     max-width: 1200px;
     margin: 0 auto;
   }
-
+  .special {
+    color: blue; /* Change the color to any color you desire */
+  }
+  
+  /* If you want to change the background color as well */
+  .special {
+    color: blue; /* Change the text color */
+    background-color: lightgray; /* Change the background color */
+  }
+  /* Add more styles as needed */
   
