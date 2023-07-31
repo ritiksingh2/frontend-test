@@ -18,7 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { GoogleMapsModule } from '@angular/google-maps'
 import { PanelTableComponent } from './panel-table/panel-table.component';
-
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +39,8 @@ import { PanelTableComponent } from './panel-table/panel-table.component';
     MatFormFieldModule,
     MatInputModule,
     MatSidenavModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

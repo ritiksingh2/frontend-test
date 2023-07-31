@@ -7,6 +7,7 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatSidenav } from '@angular/material/sidenav';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-panel-table',
@@ -15,12 +16,13 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class PanelTableComponent implements OnInit {
   title = 'FrontendTest';
-  opened = false;
-  opened2 = false;
+  flag = false;
+  flag2 = false;
 
   displayedColumns: string[] = ['panel_name', 'mac_id', 'Lat', 'Lng','location'];
   displayedColumns2: string[] = ['parameters', 'r_phase'];
   dataSource!: MatTableDataSource<any>;
+
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
@@ -71,13 +73,14 @@ selectedPanelName: string | null = null;
     this.load = panel.r_load_status;
     this.selectedPanelName = panel.panel_name;
     this.pf = panel.r_pf_status;
-    this.opened=!this.opened;
+    this.flag=!this.flag;
   }
   map(item: any){
     this.lat = item.Lat;
     this.lng = item.Lng;
+    this.selectedPanelName = item.panel_name;
     this.center = new google.maps.LatLng(this.lat,this.lng);
-    this.opened2=!this.opened2;
+    this.flag2=!this.flag2;
   }
 
   moveMap(){

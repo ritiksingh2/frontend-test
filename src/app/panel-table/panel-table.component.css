@@ -1,6 +1,6 @@
 /* Add custom styles for the navbar */
 .mat-toolbar {
-    background-color: #1976D2;
+    background-color: #09131c;
     color: white;
   }
   
@@ -59,14 +59,6 @@
     max-width: 1200px;
     margin: 0 auto;
   }
-  .special {
-    color: blue; /* Change the color to any color you desire */
-  }
-  
-  /* If you want to change the background color as well */
-  .special {
-    color: blue; /* Change the text color */
-    background-color: lightgray; /* Change the background color */
-  }
+
   /* Add more styles as needed */
   
